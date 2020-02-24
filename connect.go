@@ -54,7 +54,7 @@ type In interface {
 	// println(big.NewRat(math.MaxInt64,1000 /* milliseonds */ *1000 /* seconds */ *60 /* minutes */ *60 /* hours */ *24 /* days */ *365 /* years */).FloatString(0))
 	// output: 292471
 	// => a ascending timestamp based on microseconds would wrap after 292471 years
-	SetListener(func(data []byte, deltaMicroseconds int64)) error
+	SetListener(func(data []byte, deltaMicroseconds int64, deviceID int)) error
 
 	// StopListening stops the listening
 	// When closing an MIDI input port, StopListening must be called before (from the driver)
